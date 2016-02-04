@@ -11,7 +11,7 @@
     
     	// SETUP
 		
-		// default URL for hosted tool on github
+		// default subreddit name
 		var su = 'mysubredditname';
 
 		$(document).ready(function(){	
@@ -26,7 +26,7 @@
 				 makebookmarklet()
 			});
 						
-			// this function will update the bookmarklet based on the value of the image size and url field values
+			// this function will update the bookmarklet based on the value of the form fields
 			function makebookmarklet() {			
 				
 				// Here is the magic code
@@ -76,12 +76,12 @@
   		<div class='hero-unit' id="home">
 			<header>
 				<h1 class=''><img src="//www.redditstatic.com/spreddit13.gif" alt="submit to reddit" border="0" /> subreddit link maker</h1>
-				<p>Creates a bookmarklet tool useful for adding a link to specified subreddit.</p>
+				<p>Creates a bookmarklet tool useful for adding a link to specified subreddit- it will populate the subreddit add link form with fields automatically populated from content in the target page. This tool will append and selected text in the page to the title when added to reddit (to provide a bit mroe context)</p>
 			</header>
 
 			
 			<h2 id="maker">Bookmarklet Generator</h2>
-			<p>Build a bookmarklet tool for any subreddit</p>
+			<p>Build a bookmarklet tool to add a link to any subreddit.</p>
 			
 		<form>
 	  	<label for="isize"></label>
