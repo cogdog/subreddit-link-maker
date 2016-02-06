@@ -38,7 +38,7 @@ Now you can engage in dynamic comment conversation about this link.
 
 ## Postscript
 
-I fully expect someone to tell me of an already bult reddit tool for doing this. In many ways, it was an exercise in some Javascript, jQuery, and building a github site.
+I fully expect someone to tell me of an already built reddit tool for doing this. In many ways, it was an exercise in some Javascript, jQuery, and building a github site.
 
 
 
