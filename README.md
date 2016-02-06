@@ -7,9 +7,9 @@ If you create a your own subreddit on reddit.com this tool offers an easy way to
 With this tool, you create your own browser bookmarklet, a link you add to your browser tool bar, that will let you add links to any subreddit you want to contribute to.
 
 ## Making Your Own Bookmarklet
-First, to the Generator at http://cogdog.github.io/subreddit-link-maker/
+First, go to the Generator at http://cogdog.github.io/subreddit-link-maker/
 
-In the forst form field, you need to enter the name of the subreddit you want to use. In the example below, it will add to the subreddit at https://www.reddit.com/r/ds106 so I enter `ds106`.
+In the first form field, you need to enter the name of the subreddit you want to use. In the example below, it will add to the subreddit at https://www.reddit.com/r/ds106 so I enter `ds106`.
 
 ![](assets/images/subreddit-link-maker.jpg "Subreddit Link Maker")
 
