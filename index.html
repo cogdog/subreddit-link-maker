@@ -22,7 +22,7 @@
 			// call function to set value of text area and bookmarklet link
 			makebookmarklet();				
 			
-			$('#rname').change(function() {
+			$('#rname').keyup(function() {
 				 makebookmarklet()
 			});
 						
@@ -30,8 +30,37 @@
 			function makebookmarklet() {			
 				
 				// Here is the magic code
-			
-				str = "javascript:(function(){d=document;q=d.getSelection();u=encodeURIComponent(d.location.href);ti=encodeURIComponent(d.title + ' ' + q);window.open('https://www.reddit.com/r/" + $('#rname').val() + "/submit?url='+u+'&title='+ti,'red','width=' + Math.max(900, 0.75 * window.innerWidth)  + ', height=' + window.innerHeight)})()";
+
+// make the bookmarklet script
+				// modeled from https://en.wikipedia.org/wiki/Bookmarklet#Example
+				
+				/*
+				Here is the bookmarklet code in a bit more readable form
+				
+				str =  "javascript:(function() {
+					function se(d) {
+						return d.selection ? d.selection.createRange().text : d.getSelection()
+					} 
+					
+					s = se(document);
+				 	for (i=0; i<frames.length && !s; i++) s = se(frames[i].document); 
+				 	
+				 	u = encodeURIComponent(document.location.href);
+				 	
+				 	ti=encodeURIComponent(document.title + ' -- ' + s);
+				 	
+				 	window.open(
+				 		'https://www.reddit.com/r/" + $('#rname').val() 
+				 		+ "/submit?url='+ u + '&title='+ti,
+				 		'red','width=' + Math.max(900, 0.75 * window.innerWidth)  
+				 		+ ', height=' + window.innerHeight
+				 	);
+				 })()";
+
+				*/
+				
+				// compact form of bookmarklet code
+				str =  "javascript:(function() { function se(d) { return d.selection ? d.selection.createRange().text : d.getSelection() } s = se(document); for (i=0; i<frames.length && !s; i++) s = se(frames[i].document); u = encodeURIComponent(document.location.href);ti=encodeURIComponent(document.title + ' -- ' + s);window.open('https://www.reddit.com/r/" + $('#rname').val() + "/submit?url='+ u + '&title='+ti, 'red','width=' + Math.max(900, 0.75 * window.innerWidth) + ', height=' + window.innerHeight ); })()";
 				
 				// insert into textarea
 				$('#marklet').val(str);
